@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Readme</title>
+    </head>
+    <body>
+    <h3>功能</h3>
+      <p>&emsp;&emsp;简单的Web Server功能，支持GET和POST方法的报文分析和处理。</p>
+      <p>&emsp;&emsp;调用CGI的功能尚未实现，所以当请求带有参数时会响应500页面。</p>
+      <p>&emsp;&emsp;原计划可调用执行php文件，但是没有找到比cli和fastcgi更好的实现方法，暂时搁置。</p>
+      <p>&emsp;&emsp;可响应html、js、css、png、jpg、ico等文件。</p>
+      <p>&emsp;&emsp;记录访问日志。</p>
+      <br>
+    
+    <h3>依赖与编译</h3>
+      <p>&emsp;&emsp;httpd使用pcre库实现利用正则表达式处理http请求，pcre安装方法如下</p>
+      <p>&emsp;&emsp;&emsp;Debian系: sudo apt-get install libpcre3 libpcre3-dev</p>
+      <p>&emsp;&emsp;&emsp;Redhat: https://blog.csdn.net/luozhonghua2014/article/details/37054235</p>
+      <p>&emsp;&emsp;使用make命令编译</p>
+      <br>
+      
+    <h3>使用</h3>
+      <p>&emsp;&emsp;./httpd {&lt;ip&gt;}[&lt;port&gt;]</p>
+      <p>&emsp;&emsp;&emsp;&lt;ip&gt;： 运行httpd的主机ip，可使用-a参数在所有局域网中运行httpd</p>
+      <p>&emsp;&emsp;&emsp;&lt;port&gt;: 表示httpd监听的端口，可省略，默认为8080</p>
+      <p>&emsp;&emsp;&emsp;例1：./httpd 127.0.0.1</p>
+      <p>&emsp;&emsp;&emsp;例2：./httpd -a 8090</p>
+      <p>&emsp;&emsp;网页内容目录为htdocs，访问日志文件为access_log</p>
+      <br>
+    
+    <h3>作者</h3>
+      <p>&emsp;&emsp;何子睿_2016220303005</p>
+    </body>
+</html>
